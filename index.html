@@ -1,0 +1,35 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styling.css">
+	</head>
+	<body>
+
+		<div id="Content-1">
+			<h1>How many pages?</h1><input id="Length" type="text">
+
+			<h1>On average how long to read 1 page</h1><input id="Time" type="text"><p>(if unknown put 0)</p>
+
+			<button onclick="myFunction()">Calculate</button>
+
+			<h1>It should only take you: </h1><h1 id="Result"></h1>
+		</div>
+
+		<script>
+
+			function myFunction(){
+
+			var Length = document.getElementById("Length").value;
+			var Time = document.getElementById("Time").value;
+			var Result = document.getElementById("Result");
+
+				if (Time > 0) {
+					document.getElementById("Result").innerHTML = Length*Time+' Minutes';
+				}	else {
+					Result.innerHTML = Length*2.5 + ' Minutes';
+				}
+			}
+
+			// Length x Time //
+		</script>
+	</body>
+	</html>
